@@ -2,26 +2,24 @@ import { specs } from '../data'
 
 export default function SpecsTable() {
   return (
-    <section id="specs" className="bg-white pb-24">
+    <section id="specs" className="bg-white pb-20">
       <div className="container-x">
-        <p className="mb-6 font-bold tracking-[0.15em] text-xs uppercase text-ink">
-          Technical Specifications &amp; Compliance Table
-        </p>
-        <div className="overflow-x-auto rounded-lg border border-slate-200">
-          <table className="w-full min-w-[680px] text-left text-sm">
+        <p className="mb-5 text-xl font-bold text-ink">Technical Specifications &amp; Compliance Table</p>
+        <div className="rounded-md bg-white p-4 shadow-sm ring-1 ring-slate-100">
+          <table className="w-full min-w-[640px] text-left text-sm">
             <thead>
-              <tr className="border-b border-slate-200 bg-slate-50 text-xs uppercase tracking-wide text-slate-soft">
-                <th className="px-6 py-3 font-semibold">Category</th>
-                <th className="px-6 py-3 font-semibold">Requirement</th>
-                <th className="px-6 py-3 font-semibold text-brand-blue">BitExtract AI Specification</th>
+              <tr className="border-b-2 border-slate-200 text-brand-blue">
+                <th className="px-4 py-3 text-base font-bold">Category</th>
+                <th className="px-4 py-3 text-base font-bold">Requirement</th>
+                <th className="px-4 py-3 text-base font-bold">BitExtract AI Specification</th>
               </tr>
             </thead>
             <tbody>
-              {specs.map((s, i) => (
-                <tr key={s.category} className={i % 2 ? 'bg-slate-50/40' : 'bg-white'}>
-                  <td className="px-6 py-3 font-medium text-ink">{s.category}</td>
-                  <td className="px-6 py-3 text-slate-soft">{s.requirement}</td>
-                  <td className="px-6 py-3 text-slate-text">{s.value}</td>
+              {specs.map((s) => (
+                <tr key={s.category} className="border-b border-slate-100 last:border-0">
+                  <td className="px-4 py-3 text-xs text-ink">{s.category}</td>
+                  <td className="px-4 py-3 text-xs text-ink">{s.requirement}</td>
+                  <td className="px-4 py-3 text-xs text-ink">{s.value}</td>
                 </tr>
               ))}
             </tbody>

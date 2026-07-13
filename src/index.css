@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,15 +9,12 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-white text-slate-text font-sans antialiased;
+    @apply bg-white text-ink font-sans antialiased;
   }
 }
 
 @layer components {
   .container-x {
-    @apply mx-auto w-full max-w-[1180px] px-6 lg:px-12;
-  }
-  .section-label {
-    @apply font-bold tracking-[0.2em] text-xs uppercase text-ink;
+    @apply mx-auto w-full max-w-[1120px] px-6 lg:px-10;
   }
 }

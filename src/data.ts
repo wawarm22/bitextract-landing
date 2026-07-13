@@ -27,29 +27,29 @@ export const coreFeatures = [
 
 export const capabilities = [
   {
-    title: 'Thai Language NLP',
-    desc: 'Fully supports Thai text classification and recognizes human handwriting with high confidence.',
-  },
-  {
     title: 'Intelligent Extraction',
-    desc: 'Automatic detection of Form Fields (Name, Address, etc.). High-accuracy Selection Mark detection (Checkboxes/Radio buttons). Complex Table Extraction for financial and structured data. Handles Overlapping Fields through advanced spatial analysis.',
+    desc: '*Automatic detection of Form Fields (Name, Address, etc.). High-accuracy Selection Mark detection (Checkboxes/Radio buttons). Complex Table Extraction for financial and structured data. Handles Overlapping Fields through advanced spatial analysis.',
   },
   {
     title: 'Model Customization',
     desc: 'Tailor AI models using your specific document samples. Support for both Custom Training (new structures) and Fine-Tuning (enhancing existing accuracy).',
   },
+  {
+    title: 'Thai Language NLP',
+    desc: 'Fully supports Thai text classification and recognizes human handwriting with high confidence.',
+  },
 ]
 
 export const performance = [
-  { title: 'Speed', label: 'Heavyweight Handling', desc: 'Engineered to handle high-demand environments with a minimum throughput of 15 transactions per second.' },
-  { title: 'Visual Clarity', label: 'Resolution', desc: 'Supports high-resolution imagery up to 40 Megapixels.' },
-  { title: 'Heavyweight Handling', label: 'Capacity', desc: 'Process files up to 500 MB or 2,000 pages per document.' },
+  { title: 'Heavyweight Handling', desc: 'Process files up to 500 MB or 2,000 pages per document.' },
+  { title: 'Visual Clarity', desc: 'Supports high-resolution imagery up to 40 Megapixels.' },
+  { title: 'Speed', desc: 'Engineered to handle high-demand environments with a minimum throughput of 15 transactions per second.' },
 ]
 
 export const secureData = [
-  { title: 'Auto-Scalability', desc: 'Utilizing AWS S3 and DynamoDB technologies, storage expands automatically without downtime.' },
-  { title: 'Versioning & Recovery', desc: 'Built-in Version Control to revert to previous states and Soft-Delete protection to prevent accidental data loss.' },
   { title: 'Unstructured Data Storage', desc: 'Effortlessly store images, PDFs, and log files.' },
+  { title: 'Versioning & Recovery', desc: 'Built-in Version Control to revert to previous states and Soft-Delete protection to prevent accidental data loss.' },
+  { title: 'Auto-Scalability', desc: 'Utilizing AWS S3 and DynamoDB technologies, storage expands automatically without downtime.' },
 ]
 
 export const differentiation = [
