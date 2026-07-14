@@ -1,22 +1,47 @@
+// Original ThinkBit site header, recreated. Menu now includes PRODUCT (below Service).
+// NOTE: replace the logo mark below with the real ThinkBit logo asset (SVG/PNG) when available.
+const nav = [
+  { label: 'HOME', href: 'https://www.think-bit.org' },
+  { label: 'SERVICE', href: 'https://www.think-bit.org/service' },
+  { label: 'PRODUCT', href: '#', active: true },
+  { label: 'CONTACT', href: 'https://www.think-bit.org/contact' },
+  { label: 'CAREER', href: 'https://www.think-bit.org/career' },
+]
+
+function Logo() {
+  return (
+    <a href="https://www.think-bit.org" className="flex items-center gap-2.5">
+      {/* placeholder gradient mark — swap for the real ThinkBit logo */}
+      <span
+        className="inline-block h-8 w-8 rounded-md"
+        style={{ background: 'linear-gradient(135deg,#e0399a 0%,#7b3ff2 45%,#2f7bf2 100%)' }}
+      />
+      <span className="text-2xl font-extrabold tracking-tight">
+        <span className="text-[#0d0e42]">THINK</span>
+        <span className="text-slate-400">BIT</span>
+      </span>
+    </a>
+  )
+}
+
 export default function Navbar() {
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
-      <div className="container-x flex h-16 items-center justify-between">
-        <div className="flex items-center gap-3">
-          <span className="font-display text-sm font-extrabold tracking-tight text-ink">
-            BIT<span className="text-brand-blue">EXTRACT</span>-AI
-          </span>
-          <span className="h-4 w-px bg-slate-300" />
-          <span className="flex items-center gap-1 text-sm font-bold text-ink">
-            <svg viewBox="0 0 24 24" className="h-4 w-4 text-brand-blue" fill="currentColor">
-              <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" />
-            </svg>
-            THINKBIT
-          </span>
-        </div>
-        <a href="#cta" className="hidden rounded-md bg-brand-blue px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-blue-dark md:inline-block">
-          Get started
-        </a>
+    <header className="sticky top-0 z-50 border-b border-slate-100 bg-white">
+      <div className="container-x flex h-[70px] items-center justify-between">
+        <Logo />
+        <nav className="hidden items-center gap-8 md:flex">
+          {nav.map((n) => (
+            <a
+              key={n.label}
+              href={n.href}
+              className={`text-sm font-semibold tracking-wide transition-colors hover:text-brand-blue ${
+                n.active ? 'text-brand-blue' : 'text-[#0d0e42]'
+              }`}
+            >
+              {n.label}
+            </a>
+          ))}
+        </nav>
       </div>
     </header>
   )

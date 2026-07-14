@@ -13,11 +13,14 @@ export default function Hero() {
 
       <div className="container-x relative pt-20">
         <div>
-          <h1 className="font-display text-[72px] font-extrabold leading-none tracking-tight text-ink lg:text-[112px]">
-            BIT<span className="text-brand-blue">TEXT</span>
+          <h1 className="font-display text-[64px] leading-none tracking-tight text-ink lg:text-[96px]">
+            <span className="font-normal">BIT</span>
+            <span className="bg-gradient-to-r from-[#7ab6ea] via-[#2f6bf2] to-[#0a2f9e] bg-clip-text font-semibold text-transparent">
+              TEXT
+            </span>
           </h1>
-          <p className="mt-2 text-2xl font-semibold text-ink lg:text-[26px]">The Enterprise-Grade</p>
-          <p className="mt-1 text-[13px] text-gray2">Intelligence Document Processing Platform.</p>
+          <p className="mt-3 text-3xl font-medium text-ink lg:text-[36px]">The Enterprise-Grade</p>
+          <p className="mt-2 text-base font-normal text-gray1 lg:text-[18px]">Intelligence Document Processing Platform.</p>
         </div>
 
         <div className="relative -mt-8 flex justify-center pb-4">

@@ -1,5 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Headbanner from './components/Headbanner'
+import ProductCard from './components/ProductCard'
 import Transform from './components/Transform'
 import CoreFeatures from './components/CoreFeatures'
 import Differentiation from './components/Differentiation'
@@ -11,6 +13,8 @@ export default function App() {
     <div className="min-h-screen bg-white text-slate-text">
       <Navbar />
       <main>
+        <Headbanner />
+        <ProductCard />
         <Hero />
         <Transform />
         <CoreFeatures />

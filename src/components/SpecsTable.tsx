@@ -2,7 +2,10 @@ import { specs } from '../data'
 
 export default function SpecsTable() {
   return (
-    <section id="specs" className="bg-white pb-20">
+    <section
+      id="specs"
+      className="bg-[linear-gradient(180deg,#ffffff_0%,#e3ecfb_30%,#4a72d6_84%,#1e40c4_100%)] pt-14 pb-24"
+    >
       <div className="container-x">
         <p className="mb-5 text-xl font-bold text-ink">Technical Specifications &amp; Compliance Table</p>
         <div className="rounded-md bg-white p-4 shadow-sm ring-1 ring-slate-100">

@@ -2,7 +2,10 @@ import { capabilities, performance, secureData } from '../data'
 
 export default function CoreFeatures() {
   return (
-    <section id="features" className="bg-gradient-to-b from-[#eef4fc] to-[#dbe7fa] py-14">
+    <section
+      id="features"
+      className="bg-[linear-gradient(180deg,#ffffff_0%,#e3edfb_15%,#4374d4_47%,#10357f_72%,#07153b_92%)] py-14"
+    >
       <div className="container-x">
         {/* label + banner row */}
         <div className="flex items-start gap-6">
@@ -14,7 +17,7 @@ export default function CoreFeatures() {
 
         {/* Advanced Document Intelligence — white card */}
         <div className="mt-6 rounded-lg bg-white p-7 shadow-sm lg:p-9">
-          <h3 className="font-display text-xl font-bold text-brand-blue">Advanced Document Intelligence</h3>
+          <h3 className="font-display text-xl font-bold text-brand-blue">ADVANCED DOCUMENT INTELLIGENCE</h3>
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {capabilities.map((c) => (
               <div key={c.title}>
