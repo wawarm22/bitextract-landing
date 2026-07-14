@@ -24,76 +24,86 @@ const BrainIcon = () => (
 
 // title split so an icon replaces a specific letter (matches the Figma wordmarks)
 const benefits = [
-  { color: '#0f42c6', pre: 'Precision ', icon: <TargetIcon />, post: 'CR', brain: false,
-    desc: 'Specialized in Thai language and cursive handwriting recognition.' },
-  { color: '#3d2ea9', pre: 'Custom-Trained Intelligence', icon: null, post: '', brain: true,
-    desc: "Don't just use a generic model — build one that understands your specific forms." },
-  { color: '#12b3b3', pre: 'Enterprise Sec', icon: <ShieldIcon />, post: 'rity', brain: false,
-    desc: 'Bank-grade encryption and global compliance (GDPR, ISO 27001) built-in.' },
-  { color: '#b01868', pre: 'Infinite Scalabili', icon: <ArrowIcon />, post: 'y', brain: false,
-    desc: 'Hosted on AWS infrastructure, ensuring your operations never stop, no matter how much data you grow.' },
+  {
+    color: '#0f42c6', pre: 'Precision ', icon: <TargetIcon />, post: 'CR', brain: false,
+    desc: 'Specialized in Thai language and cursive handwriting recognition.'
+  },
+  {
+    color: '#3d2ea9', pre: 'Custom-Trained Intelligence', icon: null, post: '', brain: true,
+    desc: "Don't just use a generic model — build one that understands your specific forms."
+  },
+  {
+    color: '#12b3b3', pre: 'Enterprise Sec', icon: <ShieldIcon />, post: 'rity', brain: false,
+    desc: 'Bank-grade encryption and global compliance (GDPR, ISO 27001) built-in.'
+  },
+  {
+    color: '#b01868', pre: 'Infinite Scalabili', icon: <ArrowIcon />, post: 'y', brain: false,
+    desc: 'Hosted on AWS infrastructure, ensuring your operations never stop, no matter how much data you grow.'
+  },
 ]
 
 export default function Transform() {
   return (
     <section className="bg-white py-16 lg:py-24">
       <div className="container-x">
-        {/* Transform unstructured data into ACTIONABLE INSIGHTS */}
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-0">
-          <span className="font-display text-[24px] font-bold text-ink lg:text-[33px]">Transform</span>
-          {/* exact "unstructured data" vector art from Figma — sized by height to match "Transform" */}
-          <img
-            src="/assets/transform-unstructured.svg"
-            alt="unstructured data"
-            className="relative top-[-18px] h-[44px] w-auto max-w-full lg:h-[85px]"
-          />
-        </div>
-        {/* "into" (small, top-aligned) indented to ~the "f" of "Transform", then ACTIONABLE INSIGHTS */}
-        <p className="mt-0 flex items-start gap-x-3 pl-[70px] lg:pl-[118px]">
-          <span className="text-2xl font-light leading-none text-gray2 lg:text-3xl">into</span>
-          <span className="font-display text-4xl font-extrabold leading-none tracking-tight text-ink lg:text-[58px]">
-            ACTIONABLE INSIGHTS
-          </span>
-        </p>
-
-        {/* With BITTEXT */}
-        <div className="mt-10">
-          <p className="font-display text-2xl font-light text-ink">With</p>
-          <p className="font-display text-5xl tracking-tight text-ink">
-            <span className="font-normal">BIT</span>
-            <span className="bg-gradient-to-r from-[#0f42c6] via-[#2f6bf2] to-[#44bcd3] bg-clip-text font-semibold text-transparent">
-              TEXT
+        <div className="flex flex-col items-center">
+          {/* Transform unstructured data into ACTIONABLE INSIGHTS */}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-0">
+            <span className="font-display text-[24px] font-bold text-ink lg:text-[33px]">Transform</span>
+            {/* exact "unstructured data" vector art from Figma — sized by height to match "Transform" */}
+            <img
+              src="/assets/transform-unstructured.svg"
+              alt="unstructured data"
+              className="relative top-[-4px] h-auto w-full max-w-full sm:top-[-8px] sm:h-[44px] sm:w-auto lg:top-[-18px] lg:h-[85px]"
+            />
+          </div>
+          {/* "into" (small, top-aligned) indented to ~the "f" of "Transform", then ACTIONABLE INSIGHTS */}
+          <p className="mt-0 flex items-start gap-x-2 pl-[40px] sm:gap-x-3 sm:pl-[70px] lg:pl-[118px]">
+            <span className="text-base font-light leading-none text-gray2 sm:text-2xl lg:text-3xl">into</span>
+            <span className="font-display text-2xl font-extrabold leading-none tracking-tight text-ink sm:text-4xl lg:text-[58px]">
+              ACTIONABLE INSIGHTS
             </span>
           </p>
-          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink">
-            Unlock the power of your documents. From Thai forms to complex financial tables, BitExtract AI by ThinkBit
-            provides a seamless, high-performance PaaS solution for automated data extraction and secure cloud storage.
-          </p>
-        </div>
 
-        {/* Key Benefits */}
-        <h3 className="mt-10 text-2xl font-bold text-ink">Key Benefits</h3>
-        <div className="mt-7 grid max-w-4xl gap-x-16 gap-y-9 sm:grid-cols-2">
-          {benefits.map((b) => (
-            <div key={b.pre}>
-              <div className="relative inline-flex items-center text-lg font-bold" style={{ color: b.color }}>
-                {b.brain && (
-                  <span className="absolute left-[85px] top-[-0.80em]">
-                    <BrainIcon />
-                  </span>
-                )}
-                <span>{b.pre}</span>
-                {b.icon}
-                <span>{b.post}</span>
+          {/* With BITTEXT */}
+          <div className="mt-10">
+            <p className="font-display text-2xl font-light text-ink">With</p>
+            <p className="font-display text-5xl tracking-tight text-ink">
+              <span className="font-normal">BIT</span>
+              <span className="bg-gradient-to-r from-[#0f42c6] via-[#2f6bf2] to-[#44bcd3] bg-clip-text font-semibold text-transparent">
+                TEXT
+              </span>
+            </p>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink">
+              Unlock the power of your documents. From Thai forms to complex financial tables, BitExtract AI by ThinkBit
+              provides a seamless, high-performance PaaS solution for automated data extraction and secure cloud storage.
+            </p>
+          </div>
+
+          {/* Key Benefits */}
+          <h3 className="mt-10 text-2xl font-bold text-ink">Key Benefits</h3>
+          <div className="mt-7 grid max-w-4xl gap-x-16 gap-y-9 sm:grid-cols-2">
+            {benefits.map((b) => (
+              <div key={b.pre}>
+                <div className="relative inline-flex items-center text-lg font-bold" style={{ color: b.color }}>
+                  {b.brain && (
+                    <span className="absolute left-[85px] top-[-0.80em]">
+                      <BrainIcon />
+                    </span>
+                  )}
+                  <span>{b.pre}</span>
+                  {b.icon}
+                  <span>{b.post}</span>
+                </div>
+                <p
+                  className="mt-2 max-w-sm border-l-2 pl-3 text-xs leading-relaxed text-ink"
+                  style={{ borderColor: b.color }}
+                >
+                  {b.desc}
+                </p>
               </div>
-              <p
-                className="mt-2 max-w-sm border-l-2 pl-3 text-xs leading-relaxed text-ink"
-                style={{ borderColor: b.color }}
-              >
-                {b.desc}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
