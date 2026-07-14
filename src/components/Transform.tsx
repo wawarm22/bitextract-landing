@@ -1,28 +1,3 @@
-import type { CSSProperties } from 'react'
-
-// "unstructured data" is outlined vector art in the .fig — recreated here as styled glyphs.
-// (For a pixel-perfect match, export that graphic from Figma as PNG/SVG and drop it in.)
-// size = em multiplier of the base font size; dy nudges vertical position.
-const ransom: { c: string; s: CSSProperties; size: number; dy?: number }[] = [
-  { c: 'u', size: 0.9, s: { color: '#b01868', fontFamily: 'Georgia, serif', transform: 'rotate(-10deg)' } },
-  { c: 'N', size: 1.55, dy: -4, s: { color: '#44bcd3', fontWeight: 800, transform: 'rotate(3deg)' } },
-  { c: 's', size: 0.85, dy: 6, s: { color: '#111', fontStyle: 'italic', transform: 'rotate(-6deg)' } },
-  { c: 'T', size: 1.5, dy: -2, s: { color: '#2ba7c4', fontFamily: 'Georgia, serif', transform: 'rotate(-12deg)' } },
-  { c: 'r', size: 0.8, dy: 8, s: { color: '#3d2ea9', transform: 'rotate(9deg)' } },
-  { c: 'U', size: 1.05, s: { color: '#fff', WebkitTextStroke: '2px #1b1b1b', transform: 'rotate(5deg)' } },
-  { c: 'C', size: 1.65, dy: -3, s: { color: '#0f42c6', fontWeight: 800, transform: 'rotate(-4deg)' } },
-  { c: 't', size: 0.85, dy: 6, s: { color: '#b01868', fontFamily: 'Georgia, serif', fontStyle: 'italic', transform: 'rotate(11deg)' } },
-  { c: 'U', size: 1.5, s: { color: '#fff', WebkitTextStroke: '2px #444', transform: 'rotate(-5deg)' } },
-  { c: 'r', size: 0.8, dy: 8, s: { color: '#7a6fd0', transform: 'rotate(7deg)' } },
-  { c: 'E', size: 1.15, s: { color: '#fff', WebkitTextStroke: '2px #3d2ea9', fontFamily: 'Georgia, serif', transform: 'rotate(-7deg)' } },
-  { c: 'D', size: 1.55, dy: -3, s: { color: '#111', fontWeight: 800, transform: 'rotate(3deg)' } },
-  { c: ' ', size: 0.4, s: {} },
-  { c: 'd', size: 0.95, dy: 4, s: { color: '#44bcd3', transform: 'rotate(-5deg)' } },
-  { c: 'A', size: 1.1, s: { color: '#b01868', fontWeight: 800, transform: 'rotate(6deg)' } },
-  { c: 't', size: 0.85, dy: 4, s: { color: '#111', transform: 'rotate(-3deg)' } },
-  { c: 'a', size: 0.95, s: { color: '#44bcd3', transform: 'rotate(-4deg)' } },
-]
-
 // Exact icons exported as SVG from the Figma file, embedded inline (crisp at any size).
 const TargetIcon = () => (
   <svg viewBox="0 0 66 69" className="relative top-[-5px] ms-[0.15em] inline-block h-[1.4em] w-auto" fill="#0F42C6">
@@ -64,23 +39,21 @@ export default function Transform() {
     <section className="bg-white py-16 lg:py-24">
       <div className="container-x">
         {/* Transform unstructured data into ACTIONABLE INSIGHTS */}
-        <div className="flex flex-wrap items-center gap-x-3 text-[34px] lg:text-[52px]">
-          <span className="font-display font-bold text-ink">Transform</span>
-          <span className="inline-flex items-center leading-none">
-            {ransom.map((g, i) => (
-              <span
-                key={i}
-                className="inline-block font-bold leading-none"
-                style={{ ...g.s, fontSize: `${g.size}em`, transform: `${g.s.transform ?? ''} translateY(${g.dy ?? 0}px)` }}
-              >
-                {g.c === ' ' ? ' ' : g.c}
-              </span>
-            ))}
-          </span>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-0">
+          <span className="font-display text-[24px] font-bold text-ink lg:text-[33px]">Transform</span>
+          {/* exact "unstructured data" vector art from Figma — sized by height to match "Transform" */}
+          <img
+            src="/assets/transform-unstructured.svg"
+            alt="unstructured data"
+            className="relative top-[-18px] h-[44px] w-auto max-w-full lg:h-[85px]"
+          />
         </div>
-        <p className="mt-1 font-display text-4xl font-extrabold tracking-tight text-ink lg:text-[58px]">
-          <span className="text-2xl font-light text-gray2 lg:text-3xl">into </span>
-          ACTIONABLE INSIGHTS
+        {/* "into" (small, top-aligned) indented to ~the "f" of "Transform", then ACTIONABLE INSIGHTS */}
+        <p className="mt-0 flex items-start gap-x-3 pl-[70px] lg:pl-[118px]">
+          <span className="text-2xl font-light leading-none text-gray2 lg:text-3xl">into</span>
+          <span className="font-display text-4xl font-extrabold leading-none tracking-tight text-ink lg:text-[58px]">
+            ACTIONABLE INSIGHTS
+          </span>
         </p>
 
         {/* With BITTEXT */}

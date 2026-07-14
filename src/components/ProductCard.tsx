@@ -1,9 +1,9 @@
 export default function ProductCard() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-[#eef3fb] py-20">
       <div className="container-x text-center">
         {/* pixel/retro heading — old ThinkBit banner style */}
-        <h2 className="font-pixel text-xl leading-[1.4] text-[#0d0e42] sm:text-2xl lg:text-3xl">
+        <h2 className="font-pixel font-bold uppercase leading-[1.3] text-[#0d0e42] text-[16px] sm:text-[24px] lg:text-[38px]">
           BITTEXT — OCR &amp; DOCUMENT INTELLIGENCE
         </h2>
         <p className="mx-auto mt-10 max-w-4xl text-lg leading-relaxed text-slate-text">
