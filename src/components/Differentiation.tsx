@@ -30,7 +30,7 @@ export default function Differentiation() {
         <div className="mb-6 text-right">
           <p className="text-lg font-bold uppercase tracking-wide text-ink">Differentiation Points</p>
           <p className="text-sm text-ink">
-            The <span className="font-bold text-brand-blue">ThinkBit</span> Advantage
+            The <img src="/assets/thinkbit-logo.png" alt="ThinkBit" className="inline-block me-1 h-5 align-middle relative bottom-[2px]" /> Advantage
           </p>
         </div>
 
