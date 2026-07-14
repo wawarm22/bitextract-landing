@@ -55,7 +55,7 @@ export const secureData = [
 export const differentiation = [
   { n: '1', tag: 'THAI CONTEXT', title: 'Mastery', desc: 'Unlike generic global providers, BitExtract AI is optimized specifically for Thai syntax, local document formats, and Thai handwriting styles.' },
   { n: '2', tag: 'HYBRID', title: 'Connectivity', desc: 'While hosted on AWS for reliability, we provide a dedicated RESTful API layer that allows for "Low-Code" integration into your existing legacy systems.' },
-  { n: '3', tag: 'PROACTIVE', title: 'Compliance', desc: "We don't just meet ISO standards — we provide automated audit logs for all data access, ensuring your Data Protection Officer (DPO) is always prepared for audits." },
+  { n: '3', tag: 'PROACTIVE', title: 'Compliance', desc: "We don't just meet ISO standards we provide automated audit logs for all data access, ensuring your Data Protection Officer (DPO) is always prepared for audits." },
 ]
 
 export const specs = [

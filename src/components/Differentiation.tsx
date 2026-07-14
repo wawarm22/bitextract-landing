@@ -1,21 +1,23 @@
 import { differentiation } from '../data'
 
 const accent = ['#0f42c6', '#3d2ea9', '#44bcd3']
+const descMaxW = ['max-w-[330px]', 'max-w-[320px]', 'max-w-[315px]']
+const stagger = ['md:mt-0', 'md:mt-[40px]', 'md:mt-[80px]']
 
 function Graphic({ n }: { n: string }) {
   // Block 1 (Mastery): exact Figma SVG (blue box + white "n" + grid)
   if (n === '1')
-    return <img src="/assets/diff-mastery.svg" alt="Thai context mastery" className="w-[190px] rounded-md" />
+    return <img src="/assets/diff-mastery.svg" alt="Thai context mastery" className="w-full max-w-[280px] h-[200px] rounded-md" />
   // Block 2 (Connectivity): light box (#CFD9F4) + exact Figma icon cluster
   if (n === '2')
     return (
-      <div className="grid h-[150px] w-[190px] place-items-center rounded-md" style={{ background: '#CFD9F4' }}>
+      <div className="grid h-[200px] w-full max-w-[280px] place-items-center rounded-md" style={{ background: '#CFD9F4' }}>
         <img src="/assets/diff-connectivity.svg" alt="Hybrid connectivity" className="h-[128px] w-auto" />
       </div>
     )
   // Block 3 (Compliance): exact Figma honeycomb SVG on a light box
   return (
-    <div className="grid h-[150px] w-[190px] place-items-center rounded-md px-4" style={{ background: '#dfe9fb' }}>
+    <div className="grid h-[200px] w-full max-w-[280px] place-items-center rounded-md px-4" style={{ background: '#dfe9fb' }}>
       <img src="/assets/diff-compliance.svg" alt="Proactive compliance" className="w-full" />
     </div>
   )
@@ -33,9 +35,9 @@ export default function Differentiation() {
         </div>
 
         {/* diagonal staggered blocks */}
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           {differentiation.map((d, i) => (
-            <article key={d.n} className="max-w-xs" style={{ marginTop: `${i * 40}px` }}>
+            <article key={d.n} className={`max-w-[325px] mx-auto sm:mx-0 ${stagger[i]}`}>
               <div className="flex items-start gap-3">
                 <span className="font-sans text-8xl font-black leading-[0.8]" style={{ color: accent[i], opacity: 0.35 }}>
                   {d.n}
@@ -49,7 +51,7 @@ export default function Differentiation() {
               <div className="mt-4">
                 <Graphic n={d.n} />
               </div>
-              <p className="mt-4 text-[11px] leading-relaxed text-ink">{d.desc}</p>
+              <p className={`mt-4 text-xs leading-relaxed text-ink ${descMaxW[i]}`}>{d.desc}</p>
             </article>
           ))}
         </div>

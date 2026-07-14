@@ -96,7 +96,7 @@ export default function Transform() {
                   <span>{b.post}</span>
                 </div>
                 <p
-                  className="mt-2 max-w-sm border-l-2 pl-3 text-xs leading-relaxed text-ink"
+                  className="mt-2 max-w-[290px] border-l-2 pl-3 text-sm leading-relaxed text-ink"
                   style={{ borderColor: b.color }}
                 >
                   {b.desc}

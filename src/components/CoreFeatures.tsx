@@ -19,11 +19,11 @@ export default function CoreFeatures() {
         {/* Advanced Document Intelligence — white card */}
         <div className="mt-6 rounded-lg bg-white p-7 shadow-sm lg:p-9">
           <h3 className="font-display text-xl font-bold text-brand-blue">ADVANCED DOCUMENT INTELLIGENCE</h3>
-          <div className="mt-5 grid gap-8 md:grid-cols-3">
+          <div className="mt-5 grid gap-[70px] md:grid-cols-3">
             {capabilities.map((c) => (
               <div key={c.title}>
                 <h4 className="text-sm font-bold text-gray1">{c.title}</h4>
-                <p className="mt-2 text-[11px] leading-relaxed text-gray1">{c.desc}</p>
+                <p className="mt-2 text-xs leading-relaxed text-gray1 max-w-[340px]">{c.desc}</p>
               </div>
             ))}
           </div>
@@ -43,7 +43,7 @@ export default function CoreFeatures() {
               {performance.map((p) => (
                 <li key={p.title}>
                   <h4 className="text-sm font-bold text-ink">{p.title}</h4>
-                  <p className="mt-1 text-[11px] leading-relaxed text-ink">{p.desc}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-ink max-w-[400px]">{p.desc}</p>
                 </li>
               ))}
             </ul>
@@ -54,7 +54,7 @@ export default function CoreFeatures() {
               {secureData.map((s) => (
                 <li key={s.title}>
                   <h4 className="text-sm font-bold text-ink">{s.title}</h4>
-                  <p className="mt-1 text-[11px] leading-relaxed text-ink">{s.desc}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-ink max-w-[360px]">{s.desc}</p>
                 </li>
               ))}
             </ul>

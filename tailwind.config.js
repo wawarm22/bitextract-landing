@@ -18,6 +18,10 @@ export default {
           lilac: '#cfd9f4',
         },
       },
+      fontSize: {
+        sm: ['0.88rem', { letterSpacing: '0.03em' }],
+        xs: ['0.91rem', { letterSpacing: '0.03em' }],
+      },
       fontFamily: {
         // Design uses Helvetica for the bulk of text
         sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
