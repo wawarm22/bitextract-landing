@@ -57,14 +57,6 @@ export default function Footer() {
           Copyright © 2020 THINKBIT Co., Ltd. All Rights Reserved.
         </p>
       </div>
-
-      {/* privacy box */}
-      <a
-        href="https://www.think-bit.org/privacy"
-        className="absolute bottom-3 right-4 border border-white/40 px-3 py-1.5 text-xs text-white hover:bg-white/10"
-      >
-        Privacy &amp; Cookies Policy
-      </a>
     </footer>
   )
 }
