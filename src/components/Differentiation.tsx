@@ -1,8 +1,8 @@
 import { differentiation } from '../data'
 
 const accent = ['#0f42c6', '#3d2ea9', '#44bcd3']
-const descMaxW = ['max-w-[330px]', 'max-w-[320px]', 'max-w-[315px]']
-const stagger = ['md:mt-0', 'md:mt-[40px]', 'md:mt-[80px]']
+const descMaxW = ['max-w-[325px]', 'max-w-[320px]', 'max-w-[315px]']
+const stagger = ['md:mt-0', 'md:mt-[90px]', 'md:mt-[180px]']
 
 function Graphic({ n }: { n: string }) {
   // Block 1 (Mastery): exact Figma SVG (blue box + white "n" + grid)
@@ -27,15 +27,8 @@ export default function Differentiation() {
   return (
     <section className="bg-white py-16">
       <div className="container-x">
-        <div className="mb-6 text-right">
-          <p className="text-lg font-bold uppercase tracking-wide text-ink">Differentiation Points</p>
-          <p className="text-sm text-ink">
-            The <img src="/assets/thinkbit-logo.png" alt="ThinkBit" className="inline-block me-1 h-5 align-middle relative bottom-[2px]" /> Advantage
-          </p>
-        </div>
-
         {/* diagonal staggered blocks */}
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+        <div className="relative grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           {differentiation.map((d, i) => (
             <article key={d.n} className={`max-w-[325px] mx-auto sm:mx-0 ${stagger[i]}`}>
               <div className="flex items-start gap-3">
@@ -54,6 +47,22 @@ export default function Differentiation() {
               <p className={`mt-4 text-xs leading-relaxed text-ink ${descMaxW[i]}`}>{d.desc}</p>
             </article>
           ))}
+
+          {/* label — aligned to bottom of last block */}
+          <div className="absolute top-0 right-5 text-right hidden md:block">
+            <p className="text-lg font-bold uppercase tracking-wide text-ink">Differentiation Points</p>
+            <p className="text-sm text-ink">
+              The <img src="/assets/thinkbit-logo.png" alt="ThinkBit" className="inline-block me-1 h-5 align-middle relative bottom-[2px]" /> Advantage
+            </p>
+          </div>
+
+          {/* label — mobile (shown above on small screens) */}
+          <div className="text-right md:hidden sm:col-span-2 order-first">
+            <p className="text-lg font-bold uppercase tracking-wide text-ink">Differentiation Points</p>
+            <p className="text-sm text-ink">
+              The <img src="/assets/thinkbit-logo.png" alt="ThinkBit" className="inline-block me-1 h-5 align-middle relative bottom-[2px]" /> Advantage
+            </p>
+          </div>
         </div>
       </div>
     </section>

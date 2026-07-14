@@ -5,7 +5,7 @@ export default function CoreFeatures() {
     <section
       id="features"
       className="py-14"
-      style={{ background: 'linear-gradient(180deg, rgba(68,188,211,0) 24.26%, rgba(68,188,211,0.3) 48.74%, #0F41C2 85.44%, #072060 101.89%)' }}
+      style={{ background: 'linear-gradient(180deg, rgba(68,188,211,0) 10%, rgba(68,188,211,0.3) 30%, #0F41C2 85.44%, #072060 101.89%)' }}
     >
       <div className="container-x">
         {/* label + banner row */}

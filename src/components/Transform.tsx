@@ -30,7 +30,7 @@ const benefits = [
   },
   {
     color: '#3d2ea9', pre: 'Custom-Trained Intelligence', icon: null, post: '', brain: true,
-    desc: "Don't just use a generic model — build one that understands your specific forms."
+    desc: "Don't just use a generic model - build one that understands your specific forms."
   },
   {
     color: '#12b3b3', pre: 'Enterprise Sec', icon: <ShieldIcon />, post: 'rity', brain: false,
@@ -48,7 +48,7 @@ export default function Transform() {
       <div className="container-x">
         <div className="flex flex-col items-center">
           {/* Transform unstructured data into ACTIONABLE INSIGHTS */}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-0">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-0 self-start">
             <span className="font-display text-[24px] font-bold text-ink lg:text-[33px]">Transform</span>
             {/* exact "unstructured data" vector art from Figma — sized by height to match "Transform" */}
             <img
@@ -58,7 +58,7 @@ export default function Transform() {
             />
           </div>
           {/* "into" (small, top-aligned) indented to ~the "f" of "Transform", then ACTIONABLE INSIGHTS */}
-          <p className="mt-0 flex items-start gap-x-2 pl-[40px] sm:gap-x-3 sm:pl-[70px] lg:pl-[118px]">
+          <p className="mt-0 flex items-start gap-x-2 pl-[40px] self-start sm:gap-x-3 sm:pl-[70px] lg:pl-[118px]">
             <span className="text-base font-light leading-none text-gray2 sm:text-2xl lg:text-3xl">into</span>
             <span className="font-display text-2xl font-extrabold leading-none tracking-tight text-ink sm:text-4xl lg:text-[58px]">
               ACTIONABLE INSIGHTS
@@ -66,7 +66,7 @@ export default function Transform() {
           </p>
 
           {/* With BITTEXT */}
-          <div className="mt-10">
+          <div className="mt-10 self-start">
             <p className="font-display text-2xl font-light text-ink">With</p>
             <p className="font-display text-5xl tracking-tight text-ink">
               <span className="font-normal">BIT</span>
@@ -81,8 +81,8 @@ export default function Transform() {
           </div>
 
           {/* Key Benefits */}
-          <h3 className="mt-10 text-2xl font-bold text-ink">Key Benefits</h3>
-          <div className="mt-7 grid max-w-4xl gap-x-16 gap-y-9 sm:grid-cols-2">
+          <h3 className="mt-10 self-start text-2xl font-bold text-ink">Key Benefits</h3>
+          <div className="mt-7 self-start grid max-w-4xl gap-x-32 gap-y-9 sm:grid-cols-2">
             {benefits.map((b) => (
               <div key={b.pre}>
                 <div className="relative inline-flex items-center text-lg font-bold" style={{ color: b.color }}>

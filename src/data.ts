@@ -2,7 +2,7 @@
 
 export const keyBenefits = [
   { title: 'Precision OCR', color: 'blue', desc: 'Specialized in Thai language and cursive handwriting recognition.' },
-  { title: 'Custom-Trained Intelligence', color: 'purple', desc: "Don't just use a generic model — build one that understands your specific forms." },
+  { title: 'Custom-Trained Intelligence', color: 'purple', desc: "Don't just use a generic model - build one that understands your specific forms." },
   { title: 'Enterprise Security', color: 'teal', desc: 'Bank-grade encryption and global compliance (GDPR, ISO 27001) built-in.' },
   { title: 'Infinite Scalability', color: 'magenta', desc: 'Hosted on AWS infrastructure, ensuring your operations never stop, no matter how much data you grow.' },
 ]
