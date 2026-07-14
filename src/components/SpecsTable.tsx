@@ -4,7 +4,7 @@ export default function SpecsTable() {
   return (
     <section
       id="specs"
-      className="bg-[linear-gradient(180deg,#ffffff_0%,#e3ecfb_30%,#4a72d6_84%,#1e40c4_100%)] pt-14 pb-24"
+      style={{ background: 'linear-gradient(180deg, rgba(68,188,211,0) 24.26%, rgba(68,188,211,0.3) 48.74%, #0F41C2 85.44%, #072060 101.89%)' }}
     >
       <div className="container-x">
         <p className="mb-5 text-lg font-bold text-ink sm:text-xl">TECHNICAL SPECIFICATIONS &amp; COMPLIANCE TABLE</p>

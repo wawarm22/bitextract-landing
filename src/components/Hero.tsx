@@ -1,6 +1,9 @@
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-hero-blue">
+    <section
+      className="relative overflow-hidden"
+      style={{ background: 'linear-gradient(180deg, rgba(68,188,211,0) 24.26%, rgba(68,188,211,0.3) 48.74%, #0F41C2 85.44%, #072060 101.89%)' }}
+    >
       {/* faint giant watermark words */}
       <div aria-hidden className="pointer-events-none absolute inset-0 select-none overflow-hidden">
         <div className="absolute -left-2 top-40 flex flex-col gap-3 font-display text-7xl font-extrabold uppercase leading-[0.95] tracking-tight text-white/[0.13] lg:text-8xl">
@@ -11,7 +14,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="container-x relative pt-20">
+      <div className="container-x relative pt-14">
         <div>
           <h1 className="font-display text-[64px] leading-none tracking-tight text-ink lg:text-[84px]">
             <span className="font-light">BIT</span>
