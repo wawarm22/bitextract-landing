@@ -4,22 +4,21 @@ const accent = ['#0f42c6', '#3d2ea9', '#44bcd3']
 const descMaxW = ['max-w-[325px]', 'max-w-[320px]', 'max-w-[315px]']
 const stagger = ['md:mt-0', 'md:mt-[90px]', 'md:mt-[180px]']
 
-function Graphic({ n }: { n: string }) {
+function Graphic({ n, i }: { n: string; i: number }) {
+  // Width follows descMaxW[i] so the graphic always matches the description width
   // Block 1 (Mastery): exact Figma SVG (blue box + white "n" + grid)
   if (n === '1')
-    return <img src="/assets/diff-mastery.svg" alt="Thai context mastery" className="w-full max-w-[260px] h-[200px] rounded-md" />
+    return <img src="/assets/diff-mastery.svg" alt="Thai context mastery" className={`w-full ${descMaxW[i]} h-[200px] object-cover rounded-md`} />
   // Block 2 (Connectivity): light box (#CFD9F4) + exact Figma icon cluster
   if (n === '2')
     return (
-      <div className="grid h-[200px] w-full max-w-[280px] place-items-center rounded-md" style={{ background: '#CFD9F4' }}>
+      <div className={`grid h-[200px] w-full ${descMaxW[i]} place-items-center rounded-md`} style={{ background: '#CFD9F4' }}>
         <img src="/assets/diff-connectivity.svg" alt="Hybrid connectivity" className="h-[128px] w-auto" />
       </div>
     )
-  // Block 3 (Compliance): exact Figma honeycomb SVG on a light box
+  // Block 3 (Compliance): exact Figma honeycomb SVG, no box
   return (
-    <div className="grid h-[200px] w-full max-w-[280px] place-items-center rounded-md px-4" style={{ background: '#dfe9fb' }}>
-      <img src="/assets/diff-compliance.svg" alt="Proactive compliance" className="w-full" />
-    </div>
+    <img src="/assets/diff-compliance.svg" alt="Proactive compliance" className={`w-full ${descMaxW[i]} h-[200px] object-cover rounded-md`} />
   )
 }
 
@@ -42,7 +41,7 @@ export default function Differentiation() {
                 </div>
               </div>
               <div className="mt-4">
-                <Graphic n={d.n} />
+                <Graphic n={d.n} i={i} />
               </div>
               <p className={`mt-4 text-xs leading-relaxed text-ink ${descMaxW[i]}`}>{d.desc}</p>
             </article>
