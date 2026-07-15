@@ -14,7 +14,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="container-x relative pt-14">
+      <div className="container-x relative pt-8">
         <div>
           <h1 className="font-display text-[64px] leading-none tracking-tight text-ink lg:text-[82px]">
             <span className="font-light">BIT</span>
@@ -22,11 +22,11 @@ export default function Hero() {
               TEXT
             </span>
           </h1>
-          <p className="mt-3 text-3xl font-medium text-ink lg:text-[44px]">The Enterprise-Grade</p>
-          <p className="mt-2 text-base font-normal text-gray1 lg:text-[22px]">Intelligence Document Processing Platform.</p>
+          <p className="mt-2 text-3xl font-medium text-ink lg:text-[44px]">The Enterprise-Grade</p>
+          <p className="mt-2 mb-3 text-base font-normal text-gray1 lg:text-[22px]">Intelligence Document Processing Platform.</p>
         </div>
 
-        <div className="relative -mt-8 flex justify-center pb-4">
+        <div className="relative -mt-8 flex justify-center py-4">
           <img
             src="/assets/hero-ai.webp"
             alt="AI document extraction — laptop processing documents on a rock"

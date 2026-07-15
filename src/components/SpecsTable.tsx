@@ -9,7 +9,7 @@ export default function SpecsTable() {
     >
       <div className="container-x">
         <p className="mb-5 text-lg font-bold text-ink sm:text-xl">TECHNICAL SPECIFICATIONS &amp; COMPLIANCE TABLE</p>
-        <div className="rounded-md bg-white p-4 shadow-sm ring-1 ring-slate-100 sm:p-6">
+        <div className="md:rounded-md md:bg-white md:p-6 md:shadow-sm md:ring-1 md:ring-slate-100">
           {/* Desktop / tablet: real table (md and up) */}
           <table className="hidden w-full text-left text-sm md:table">
             <thead>
@@ -33,16 +33,16 @@ export default function SpecsTable() {
           {/* Mobile: stacked cards (below md) */}
           <div className="space-y-4 md:hidden">
             {specs.map((s) => (
-              <div key={s.category} className="rounded-lg border border-slate-100 p-4">
+              <div key={s.category} className="rounded-lg border border-slate-100 bg-white p-4">
                 <p className="text-sm font-bold text-brand-blue">{s.category}</p>
                 <dl className="mt-3 space-y-2 text-xs">
-                  <div className="flex justify-between gap-4">
-                    <dt className="shrink-0 font-medium text-slate-500">Requirement</dt>
-                    <dd className="text-right text-ink">{s.requirement}</dd>
+                  <div className="flex gap-4">
+                    <dt className="w-[35%] shrink-0 font-medium text-slate-500">Requirement</dt>
+                    <dd className="w-[65%] text-left text-ink">{s.requirement}</dd>
                   </div>
-                  <div className="flex justify-between gap-4">
-                    <dt className="shrink-0 font-medium text-slate-500">Specification</dt>
-                    <dd className="text-right text-ink">{s.value}</dd>
+                  <div className="flex gap-4">
+                    <dt className="w-[35%] shrink-0 font-medium text-slate-500">Specification</dt>
+                    <dd className="w-[65%] text-left text-ink">{s.value}</dd>
                   </div>
                 </dl>
               </div>

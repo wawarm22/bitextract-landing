@@ -7,7 +7,7 @@ const stagger = ['md:mt-0', 'md:mt-[90px]', 'md:mt-[180px]']
 function Graphic({ n }: { n: string }) {
   // Block 1 (Mastery): exact Figma SVG (blue box + white "n" + grid)
   if (n === '1')
-    return <img src="/assets/diff-mastery.svg" alt="Thai context mastery" className="w-full max-w-[280px] h-[200px] rounded-md" />
+    return <img src="/assets/diff-mastery.svg" alt="Thai context mastery" className="w-full max-w-[260px] h-[200px] rounded-md" />
   // Block 2 (Connectivity): light box (#CFD9F4) + exact Figma icon cluster
   if (n === '2')
     return (

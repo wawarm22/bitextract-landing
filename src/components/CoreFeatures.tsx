@@ -29,14 +29,9 @@ export default function CoreFeatures() {
           </div>
         </div>
 
-        {/* two feature images */}
+        {/* feature images + white cards — mobile: img1,card1,img2,card2 / md+: imgs row then cards row */}
         <div className="mt-5 grid gap-5 md:grid-cols-2">
           <img src="/assets/feat-brain.webp" alt="Neural processing" className="h-44 w-full rounded-lg object-cover" />
-          <img src="/assets/feat-vault.webp" alt="Secure data vault" className="h-44 w-full rounded-lg object-cover" />
-        </div>
-
-        {/* two white cards with colored headings */}
-        <div className="mt-5 grid gap-5 md:grid-cols-2">
           <article className="rounded-lg bg-white p-7 shadow-sm">
             <h3 className="font-display text-lg font-bold text-brand-purple2">High-Performance Processing</h3>
             <ul className="mt-5 space-y-4">
@@ -48,6 +43,7 @@ export default function CoreFeatures() {
               ))}
             </ul>
           </article>
+          <img src="/assets/feat-vault.webp" alt="Secure data vault" className="h-44 w-full rounded-lg object-cover md:col-start-2 md:row-start-1" />
           <article className="rounded-lg bg-white p-7 shadow-sm">
             <h3 className="font-display text-lg font-bold text-brand-cyan">Secure Data Management &amp; Storage</h3>
             <ul className="mt-5 space-y-4">
