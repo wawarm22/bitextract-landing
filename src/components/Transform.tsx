@@ -26,7 +26,7 @@ const BrainIcon = () => (
 const benefits = [
   {
     color: '#0f42c6', pre: 'Precision ', icon: <TargetIcon />, post: 'CR', brain: false,
-    desc: 'Specialized in Thai language and cursive handwriting recognition.'
+    desc: 'Specialized in Thai language and cursive handwriting. Thai printed-text accuracy ≥ 97% (Character Accuracy / 1-CER); handwritten ≥ 75%. Accuracy validated on ≥ 10 sample sheets per form type.'
   },
   {
     color: '#3d2ea9', pre: 'Custom-Trained Intelligence', icon: null, post: '', brain: true,
@@ -75,7 +75,7 @@ export default function Transform() {
               </span>
             </p>
             <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink">
-              Unlock the power of your documents. From Thai forms to complex financial tables, BitExtract AI by ThinkBit
+              Unlock the power of your documents. From Thai forms to complex financial tables, BitExtract AI by ThinkBit 
               provides a seamless, high-performance PaaS solution for automated data extraction and secure cloud storage.
             </p>
           </div>

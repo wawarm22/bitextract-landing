@@ -28,7 +28,7 @@ export const coreFeatures = [
 export const capabilities = [
   {
     title: 'Intelligent Extraction',
-    desc: '*Automatic detection of Form Fields (Name, Address, etc.). High-accuracy Selection Mark detection (Checkboxes/Radio buttons). Complex Table Extraction for financial and structured data. Handles Overlapping Fields through advanced spatial analysis.',
+    desc: 'Context-aware extraction across both scanned and digital PDFs. Automatic detection of Form Fields, Selection Marks, tables, and overlapping fields. High-accuracy Selection Mark detection (checkboxes / radio buttons). Complex Table Extraction for financial and structured data. Handles overlapping fields through advanced spatial analysis.',
   },
   {
     title: 'Model Customization',
@@ -36,14 +36,23 @@ export const capabilities = [
   },
   {
     title: 'Thai Language NLP',
-    desc: 'Fully supports Thai text classification and recognizes human handwriting with high confidence.',
+    desc: 'Fully supports Thai text classification, with printed-text accuracy ≥ 97% (Character Accuracy / 1-CER) and handwritten-text accuracy ≥ 75%.',
   },
+]
+
+export const selfService = [
+  "Build-your-own Extraction Profiles - ID cards, house registration, driver's licences, receipts, tax returns and more - defined from your own sample text and sample output, with no coding. Import, export, edit, and delete profiles to reuse across teams.",
+  'Selectable OCR modes (general or complex-layout) and page / page-range selection, so you process only what you need.',
+  'Preview the output structure before you run, then view live JSON results on screen - copy or download in one click.',
+  'Review Rules automatically flag incomplete, out-of-condition, or inconsistent data for human checking.',
+  'Full job history: track status, view details and JSON, cancel running jobs, and delete finished ones.',
+  'User management with per-agency / per-user API keys for scoped access and external-system integration.',
 ]
 
 export const performance = [
   { title: 'Heavyweight Handling', desc: 'Process files up to 500 MB or 2,000 pages per document.' },
   { title: 'Visual Clarity', desc: 'Supports high-resolution imagery up to 40 Megapixels.' },
-  { title: 'Speed', desc: 'Engineered to handle high-demand environments with a minimum throughput of 15 transactions per second.' },
+  { title: 'Speed', desc: 'Engineered for high-demand environments: extraction speed ≥ 10 pages / minute and 15 transactions per second.' },
 ]
 
 export const secureData = [
@@ -53,19 +62,27 @@ export const secureData = [
 ]
 
 export const differentiation = [
-  { n: '1', tag: 'THAI CONTEXT', title: 'Mastery', desc: 'Unlike generic global providers, BitExtract AI is optimized specifically for Thai syntax, local document formats, and Thai handwriting styles.' },
-  { n: '2', tag: 'HYBRID', title: 'Connectivity', desc: 'While hosted on AWS for reliability, we provide a dedicated RESTful API layer that allows for "Low-Code" integration into your existing legacy systems.' },
-  { n: '3', tag: 'PROACTIVE', title: 'Compliance', desc: "We don't just meet ISO standards we provide automated audit logs for all data access, ensuring your Data Protection Officer (DPO) is always prepared for audits." },
+  { n: '1', tag: 'THAI CONTEXT', title: 'Mastery', desc: 'Unlike generic global providers, BitExtract AI is optimized specifically for Thai syntax, local document formats, and Thai handwriting styles. It also extracts document control and reference numbers (including tax-return control numbers / DLN and forms such as ภ.ง.ด.1/3/53 and ภ.พ.30), and supports 10+ configurable form templates - including Thai government and financial documents.' },
+  { n: '2', tag: 'HYBRID', title: 'Connectivity', desc: ' A full RESTful API covers document import, text-OCR calls, and structured-data extraction. Hosted on AWS for reliability, our dedicated "Low-Code" API layer integrates into your existing legacy systems.' },
+  { n: '3', tag: 'PROACTIVE', title: 'Compliance', desc: "We don't just meet ISO standards - we provide automated audit logs for all data access, ensuring your Data Protection Officer (DPO) is always prepared for audits." },
 ]
 
 export const specs = [
   { category: 'Infrastructure', requirement: 'Platform-as-a-Service (PaaS)', value: 'Hosted on Trusted AWS Cloud' },
   { category: 'Performance', requirement: 'Throughput', value: '15 Transactions per second' },
+  { category: 'Performance', requirement: 'Extraction speed', value: '≥ 10 pages / minute' },
+  { category: 'Extraction Accuracy', requirement: 'Thai — Printed', value: '≥ 97% (1-CER)' },
+  { category: 'Extraction Accuracy', requirement: 'Thai — Handwritten', value: '≥ 75%' },
+  { category: 'Extraction Accuracy', requirement: 'English — Printed', value: '≥ 97%' },
+  { category: 'Extraction Accuracy', requirement: 'English — Handwritten', value: '≥ 75%' },
   { category: 'File Limits', requirement: 'Max Size / Pages', value: '500 MB / 2,000 Pages per file' },
+  { category: 'Input Formats', requirement: 'Supported File Types', value: 'PDF (scanned & digital), JPG, JPEG, PNG, BMP, TIFF, GIF' },
+  { category: 'Input Resolution', requirement: 'Minimum DPI', value: '300 DPI and above' },
   { category: 'Image Quality', requirement: 'Resolution', value: 'Up to 40 Megapixels' },
   { category: 'Training Capacity', requirement: 'Custom Models', value: 'Up to 50,000 pages; 1 GB training data' },
-  { category: 'Monthly Volume', requirement: 'Scalability', value: '400,000 pages / month' },
-  { category: 'Security', requirement: 'Compliance', value: 'GDPR, HIPAA, ISO/IEC 27001 Certified' },
+  { category: 'Training Capacity', requirement: 'Classification Models', value: '2,500-10,000 pages per category' },
+  { category: 'Monthly Volume', requirement: 'Scalability', value: 'Unlimited' },
+  { category: 'Licensing', requirement: 'Term & Pages', value: '1-year license · unlimited-page annual license per procurement' },
   { category: 'Encryption', requirement: 'Data at rest & in transit', value: 'AES-256 and TLS 1.3 Encryption' },
-  { category: 'Connectivity', requirement: 'Integration', value: 'Full RESTful API Support' },
+  { category: 'Connectivity', requirement: 'Integration', value: 'Full RESTful API Support (import · text-OCR · structured extraction)' },
 ]

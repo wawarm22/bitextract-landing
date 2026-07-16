@@ -21,7 +21,7 @@ export default function SpecsTable() {
             </thead>
             <tbody>
               {specs.map((s) => (
-                <tr key={s.category} className="border-b border-slate-100 last:border-0">
+                <tr key={`${s.category}-${s.requirement}`} className="border-b border-slate-100 last:border-0">
                   <td className="px-4 py-3 text-xs text-ink">{s.category}</td>
                   <td className="px-4 py-3 text-xs text-ink">{s.requirement}</td>
                   <td className="px-4 py-3 text-xs text-ink">{s.value}</td>
@@ -33,21 +33,33 @@ export default function SpecsTable() {
           {/* Mobile: stacked cards (below md) */}
           <div className="space-y-4 md:hidden">
             {specs.map((s) => (
-              <div key={s.category} className="rounded-lg border border-slate-100 bg-white p-4">
+              <div key={`${s.category}-${s.requirement}`} className="rounded-lg border border-slate-100 bg-white p-4">
                 <p className="text-sm font-bold text-brand-blue">{s.category}</p>
                 <dl className="mt-3 space-y-2 text-xs">
                   <div className="flex gap-4">
-                    <dt className="w-[35%] shrink-0 font-medium text-slate-500">Requirement</dt>
-                    <dd className="w-[65%] text-left text-ink">{s.requirement}</dd>
+                    <dt className="w-[30%] shrink-0 font-medium text-slate-500">Requirement</dt>
+                    <dd className="w-[70%] text-left text-ink">{s.requirement}</dd>
                   </div>
                   <div className="flex gap-4">
-                    <dt className="w-[35%] shrink-0 font-medium text-slate-500">Specification</dt>
-                    <dd className="w-[65%] text-left text-ink">{s.value}</dd>
+                    <dt className="w-[30%] shrink-0 font-medium text-slate-500">Specification</dt>
+                    <dd className="w-[70%] text-left text-ink">{s.value}</dd>
                   </div>
                 </dl>
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Accuracy Measurement & Scope — white card (same style as Advanced Document Intelligence) */}
+        <div className="mt-5 rounded-lg bg-white p-5 md:p-7 shadow-sm md:p-8 lg:p-9">
+          <h3 className="font-display text-xl font-bold text-brand-blue">Accuracy Measurement &amp; Scope</h3>
+          {/* <h3 className="font-display text-xl font-bold text-brand-blue">ACCURACY MEASUREMENT &amp; SCOPE</h3> */}
+          <p className="mt-5 text-xs leading-relaxed text-gray1">
+            The stated accuracy applies based on 300 DPI and above test result printed documents whose quality is suitable
+            for OCR. The following are treated as not meeting the required quality and are excluded from the accuracy
+            guarantee: scans that are blurred, skewed, torn or incomplete, or otherwise low-quality or low-resolution. The
+            guarantee also measures main text only visual-format fidelity.
+          </p>
         </div>
       </div>
     </section>

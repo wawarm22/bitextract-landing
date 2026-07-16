@@ -1,7 +1,7 @@
 import { differentiation } from '../data'
 
 const accent = ['#0f42c6', '#3d2ea9', '#44bcd3']
-const descMaxW = ['max-w-[325px]', 'max-w-[320px]', 'max-w-[315px]']
+const descMaxW = ['max-w-[320px]', 'max-w-[320px]', 'max-w-[320px]']
 const stagger = ['md:mt-0', 'md:mt-[90px]', 'md:mt-[180px]']
 
 function Graphic({ n, i }: { n: string; i: number }) {

@@ -1,4 +1,4 @@
-import { capabilities, performance, secureData } from '../data'
+import { capabilities, performance, secureData, selfService } from '../data'
 
 export default function CoreFeatures() {
   return (
@@ -27,6 +27,18 @@ export default function CoreFeatures() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Self-Service Extraction & Job Control — white card */}
+        <div className="mt-5 rounded-lg bg-white p-7 shadow-sm lg:p-9">
+          <h3 className="font-display text-xl font-bold text-brand-blue">SELF-SERVICE EXTRACTION &amp; JOB CONTROL</h3>
+          <ul className="mt-5 grid list-inside list-disc gap-x-[70px] gap-y-6 md:grid-cols-3">
+            {selfService.map((s, i) => (
+              <li key={s} className={`pl-5 -indent-5 text-xs leading-relaxed text-gray1 max-w-[340px] ${i === 0 ? 'tracking-tight' : ''}`}>
+                {s}
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* feature images + white cards — mobile: img1,card1,img2,card2 / md+: imgs row then cards row */}
