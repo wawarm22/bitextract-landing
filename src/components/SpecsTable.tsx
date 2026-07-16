@@ -56,9 +56,10 @@ export default function SpecsTable() {
           {/* <h3 className="font-display text-xl font-bold text-brand-blue">ACCURACY MEASUREMENT &amp; SCOPE</h3> */}
           <p className="mt-5 text-xs leading-relaxed text-gray1">
             The stated accuracy applies based on 300 DPI and above test result printed documents whose quality is suitable
-            for OCR. The following are treated as not meeting the required quality and are excluded from the accuracy
-            guarantee: scans that are blurred, skewed, torn or incomplete, or otherwise low-quality or low-resolution. The
-            guarantee also measures main text only visual-format fidelity.
+            for OCR. The following are treated as not meeting the required quality and are{' '}
+            <strong className="font-bold">excluded from the accuracy guarantee</strong>: scans that are blurred, skewed,
+            torn or incomplete, or otherwise low-quality or low-resolution. The guarantee also measures{' '}
+            <strong className="font-bold">main text only</strong> visual-format fidelity.
           </p>
         </div>
       </div>
